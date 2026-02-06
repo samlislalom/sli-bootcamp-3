@@ -220,6 +220,29 @@ function TaskList({ onEdit }) {
                   }}
                 />
               )}
+              {task.priority && (
+                <Chip
+                  label={task.priority}
+                  size="small"
+                  sx={{
+                    height: 20,
+                    fontSize: '0.7rem',
+                    fontWeight: 600,
+                    ...(task.priority === 'P1' && {
+                      backgroundColor: '#f44336',
+                      color: 'white'
+                    }),
+                    ...(task.priority === 'P2' && {
+                      backgroundColor: '#ff9800',
+                      color: 'white'
+                    }),
+                    ...(task.priority === 'P3' && {
+                      backgroundColor: '#9e9e9e',
+                      color: 'white'
+                    })
+                  }}
+                />
+              )}
               <Box 
                 sx={{ 
                   display: 'flex', 
