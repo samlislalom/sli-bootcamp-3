@@ -172,9 +172,27 @@ function TaskForm({ onSave, initialTask }) {
             label="Priority"
             data-testid="priority-select"
           >
-            <MenuItem value="P1">P1 - High</MenuItem>
-            <MenuItem value="P2">P2 - Medium</MenuItem>
-            <MenuItem value="P3">P3 - Low</MenuItem>
+            <MenuItem 
+              value="P1" 
+              sx={{ backgroundColor: '#07F2E6', color: 'white', '&:hover': { backgroundColor: '#06D4C4' } }}
+              className="priority-selected"
+            >
+              P1 - High
+            </MenuItem>
+            <MenuItem 
+              value="P2" 
+              sx={{ backgroundColor: '#7A7A7A', color: 'white', '&:hover': { backgroundColor: '#666666' } }}
+              className="priority-unselected"
+            >
+              P2 - Medium
+            </MenuItem>
+            <MenuItem 
+              value="P3" 
+              sx={{ backgroundColor: '#7A7A7A', color: 'white', '&:hover': { backgroundColor: '#666666' } }}
+              className="priority-unselected"
+            >
+              P3 - Low
+            </MenuItem>
           </Select>
         </FormControl>
         {error && <Typography color="error" sx={{ fontWeight: 500, fontSize: '0.875rem' }}>{error}</Typography>}
